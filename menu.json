@@ -1,0 +1,8 @@
+[
+    { "id" : 3, "price" : 15000, "title" : "Leather Blazer" },
+    { "id" : 4, "price" : 55000, "title" : "Yoga Leggings" },
+    { "id" : 5, "price" : 30000, "title" : "Sleeveless Racer" },
+    { "id" : 6, "price" : 28000, "title" : "Activewear Jogger" },
+    { "id" : 7, "price" : 20000, "title" : "Athletic Socks" },
+    { "id" : 8, "price" : 73000, "title" : "Wrangler Denim" }
+]
