@@ -86,7 +86,8 @@
     position: relative;
 }
 .navbar {
-    height: 100px;
+
+    height: 110px;
 }
 .navbar-nav {
     font-family: 'Cafe24Danjunghae';
@@ -121,7 +122,8 @@
 .logo{
     position: relative;
     align-self: center;
-    width: 25%;
+
+    width: 18%;
     height: 80px;
 }
 .logo2 {
@@ -141,10 +143,6 @@
 #carouselExampleControls {
     position: relative;
 }
-
-
-
-
 
 .line{
     height: 49px; 
