@@ -32,28 +32,14 @@
             font-weight: normal;
             font-style: normal;
         }
-        .navbar-nav {
-            font-family: 'Cafe24Danjunghae';
-            margin-left: 10%;
-            font-size: 20px;
-            margin-top: 60px;
-
-        }
-        .logo {
-            width: 300px;
-            margin-left: 16%;
-
-        }
+        
         @font-face {
             font-family: 'EF_jejudoldam';
             src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2") format('woff2');
             font-style: normal;
         }
 
-        .navbar {
-            text-align: center;
-
-        }
+       
         .font1 {
             font-family: 'EF_jejudoldam';
             font-size: 90px;
@@ -121,12 +107,21 @@
             width: 1500px;
         }
         .box3 {
-            height: 400px;
+            height: 300px;
         }
         .font3{
-            font-family: 'Cafe24Danjunghae';
+            font-family: 'omyu_pretty';
             text-align: center;
         }
+        .font4{
+          margin-left: 25%;
+        }
+        @font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
     </style>
 
     <header>
@@ -166,6 +161,76 @@
             </form>
         </nav>
     </header>
+    <div class="banner_wraper">
+        <img src="./image/b1.png">
+        <img src="./image/b2.png">
+        <img src="./image/b3.png">
+        <img src="./image/b4.png">
+        <img src="./image/b5.png">
+        <img src="./image/b6.png">  
+        <img src="./image/b7.png">  
+        <img src="./image/b8.png">  
+
+    
+    </div>
+
+    <style>   
+
+     
+        .banner_wraper { height: 300px; width: 1680px; position: absolute; overflow: hidden; }
+        .banner_wraper img { height: 250px; margin: 30px; position: absolute; border-radius: 100px 100px 100px 100px;}
+        
+        
+        </style>
+
+<script type="text/javascript">
+
+    //client rolling banner
+window.onload = function() {
+    var bannerLeft=0;
+    var first=1;
+    var last;
+    var imgCnt=0;
+    var $img = $(".banner_wraper img");
+    var $first;
+    var $last;
+
+    $img.each(function(){   // 5px 간격으로 배너 처음 위치 시킴
+        $(this).css("left",bannerLeft);
+        bannerLeft += $(this).width()+5;
+        $(this).attr("id", "banner"+(++imgCnt));  // img에 id 속성 추가
+    });
+
+    
+    if( imgCnt > 5){                //배너 9개 이상이면 이동시킴
+
+
+
+        last = imgCnt;
+
+        setInterval(function() {
+            $img.each(function(){
+                $(this).css("left", $(this).position().left-1); // 1px씩 왼쪽으로 이동
+            });
+            $first = $("#banner"+first);
+            $last = $("#banner"+last);
+            if($first.position().left < -200) {    // 제일 앞에 배너 제일 뒤로 옮김
+                $first.css("left", $last.position().left + $last.width()+5 );
+                first++;
+                last++;
+                if(last > imgCnt) { last=1; }   
+                if(first > imgCnt) { first=1; }
+            }
+        }, 50);   //여기 값을 조정하면 속도를 조정할 수 있다.(위에 1px 이동하는 부분도 조정하면 
+
+//깔끔하게 변경가능하다           
+
+}
+
+};
+
+
+</script>
 
     <body style="background-color: rgb(252, 227, 227);">
         <div class="box3">
@@ -197,24 +262,24 @@
         
 
         var products2 = [
-            {id: 8, img: "../image/9.png", price: 6000, title: "누룽지"},
-            {id: 9, img: "../image/10.png", price: 6000, title: "캐러멜 많이 주세요"},
-            {id: 10, img: "../image/11.png", price: 6000, title: "진짜 초코"},
-            {id: 11, img: "../image/12.png", price: 6000, title: "상큼 터지는 레몬"},
-            {id: 12, img: "../image/13.png", price: 6000, title: "홍시 맛이 나서.."},
-            {id: 13, img: "../image/14.png", price: 6000, title: "초코시럽 많이 주세요"},
-            {id: 14, img: "../image/15.png", price: 6000, title: "콕콕콕 체리콕~"},
-            {id: 15, img: "../image/16.png", price: 6000, title: "깨 떨어지는"},
+            {id: 8, img: "./image/9.png", price: 6000, title: "누룽지"},
+            {id: 9, img: "./image/10.png", price: 6000, title: "캐러멜 많이 주세요"},
+            {id: 10, img: "./image/11.png", price: 6000, title: "진짜 초코"},
+            {id: 11, img: "./image/12.png", price: 6000, title: "상큼 터지는 레몬"},
+            {id: 12, img: "./image/13.png", price: 6000, title: "홍시 맛이 나서.."},
+            {id: 13, img: "./image/14.png", price: 6000, title: "초코시럽 많이 주세요"},
+            {id: 14, img: "./image/15.png", price: 6000, title: "콕콕콕 체리콕~"},
+            {id: 15, img: "./image/16.png", price: 6000, title: "깨 떨어지는"},
 
             
         ];
         products2.forEach((a, i) => {
             var 템플릿 = `<div class="col-sm-3 font3" >
         <img src="${products2[i]
-                .img}" class="w-80 menuimg" style="width: 280px;">
-        <h5>${products2[i]
+                .img}" class="w-80 menuimg" style="width: 270px; border-radius: 60px 60px 60px 60px;">
+        <h5 class="font4">${products2[i]
                 .title}</h5>
-        <p>가격 : ${products2[i]
+        <p class="font4">가격 : ${products2[i]
                 .price}</p>
       </div>`;
             $('.row').append(템플릿)
