@@ -7,7 +7,7 @@
     }
     
   }
-@media (max-width: 991.98px) {
+@media (max-width: 992px) {
     .navbar-collapse {
         position: relative;
         left: 500px;
@@ -30,7 +30,7 @@
         position: absolute;
         top: 100%;
         left: 0;
-        z-index: 1;
+        z-index: 10;
         width: 100%;
         background-color: #fff;
         padding: 10px;
@@ -80,7 +80,7 @@
 }
 .nav-link:hover {
     color: #dc3545;
-  }
+}
 .flex-box {
     display: flex;
     position: relative;
@@ -141,3 +141,5 @@
 #carouselExampleControls {
     position: relative;
 }
+
+
