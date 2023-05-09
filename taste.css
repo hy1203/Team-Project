@@ -1,0 +1,142 @@
+/* 아이스크림 조합 페이지 css */
+@media(min-width: 992px){
+    .comb {
+        padding: 0px;
+        margin: 20px 0px 20px;
+    }
+}
+
+@media(max-width: 992px){
+    .comb {
+        padding: 0px;
+        margin: 20px 0px 20px;
+    }
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+.comb {
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+}
+.taste-comb {
+    text-decoration: none;
+    height: 100%;
+    color: #000;
+    padding: 0px;
+    overflow: hidden;
+    width: auto;
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-align: center;
+}
+.taste-comb.active {
+    border-bottom: 3px solid black;
+  }
+.taste-comb a:hover {
+    color: black;
+}
+
+.taste-comb:hover {
+    text-decoration: none;
+    border-bottom: 3px solid black;
+
+}
+
+/* 나무에달린 딸기 얘네들 고치는 css */
+.container {
+    display: flex;
+}
+.ice-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.ice-box-container {
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+.ice-box {
+    margin: 0px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    width: 25%;
+    color: aliceblue;
+    font-size: 1.6rem;
+    font-weight: 900;
+    align-items: center;
+    
+}
+/* 중간 다운 이미지만 이코드 */
+.down-img {
+    width: 100%;
+    margin-bottom: 16px;
+}
+.ice-text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+/* 화살표 Css */
+.arrow-img {
+    margin-top: 10px;
+    width: 13%;
+}
+/* 이미지 */
+.ice-img-container {
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+.ice-img {
+    width: 25%;
+}
+
+.ice-background {
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    justify-content: center;
+    width: 100%;
+    z-index: 5;
+}
+
+#recommend-btn{
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+    width: 120px;
+}
+
+
+.taste-btn {
+    display: flex;
+    position: fixed;
+    width: 17%;
+    height: 6%;
+    top: 93%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 27px;
+    box-shadow: 2px 2px 5px rgb(246, 211, 103);
+    background-color:rgb(246, 211, 103) ;
+    border-radius: 30px;
+    border-color: rgb(31, 20, 83);
+    border-width: 3px;
+    color: rgb(32, 21, 82);
+    font-weight: 500;
+
+    font-family: 'Dosis', sans-serif;
+    justify-content: center;
+    align-items: center;
+}
