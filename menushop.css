@@ -1,0 +1,63 @@
+button {
+    background-color: #F9B514;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Cafe24Danjunghae';
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal .bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .modalBox {
+    position: absolute;
+    background-image: url(./image/1.png);
+    background-size: contain;
+    border-radius: 12px;
+    width: 500px;
+    height: 500px;
+    padding-top: 345px;
+    text-align: center;
+  }
+
+  .modalBox button {
+    display: inline;
+    width: 88px;
+    height: 42px;
+  }
+  input {
+    width: 76px;
+    height: 40px;
+    text-align: center;
+  }
+  .buy{
+    margin-top:20px;
+    font-size: 20px;
+  }
+    .hidden {
+        display: none;
+    }
+@font-face {
+      font-family: 'Cafe24Danjunghae';
+      src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff") format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+  .x{
+    margin-top: 10px;
+    font-size: 30px;
+  }
