@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'TTWanjudaedunsancheB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/TTWanjudaedunsancheB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
 /* 아이스크림 조합 페이지 css */
 @media(min-width: 992px){
     .comb {
@@ -21,6 +27,9 @@ a {
     display: flex;
     position: relative;
     justify-content: space-evenly;
+    font-family: 'TTWanjudaedunsancheB';
+    margin: 2%;
+
 }
 .taste-comb {
     text-decoration: none;
@@ -67,7 +76,7 @@ a {
     flex-direction: column;
     justify-content: flex-end;
     text-align: center;
-    width: 23%;
+    width: 25%;
     color: aliceblue;
     font-size: 1.6rem;
     font-weight: 900;
@@ -76,13 +85,14 @@ a {
 }
 /* 중간 다운 이미지만 이코드 */
 .down-img {
-    width: 70%;
+    width: 50%;
     margin-bottom: 16px;
 }
 .ice-text {
     width: 60%;
     display: flex;
     flex-direction: column;
+    font-family: 'TTWanjudaedunsancheB';
 }
 /* 화살표 Css */
 .arrow-img {
@@ -96,7 +106,7 @@ a {
     z-index: 5;
 }
 .ice-img {
-    width: 18%;
+    width: 25%;
 }
 
 .ice-background {
@@ -104,7 +114,8 @@ a {
     position: fixed;
     bottom: 0px;
     justify-content: center;
-    width: 60%;
+    width: 110%;
+    height: 60%;
     z-index: 5;
 }
 
@@ -136,7 +147,7 @@ a {
     color: rgb(32, 21, 82);
     font-weight: 500;
 
-    font-family: 'Dosis', sans-serif;
+    font-family: 'TTWanjudaedunsancheB';
     justify-content: center;
     align-items: center;
 }
