@@ -105,10 +105,10 @@ $(function() {
     });
 });
 </script>
-<ul id="scroller">
-    <li><img src="./image/allmenu.png" style="width: 1665px; margin-left: -10px;" /></li>
+<ul id="scroller" style="list-style: none; padding-left: 0px;">
+    <li><img src="./image/allmenu.png" style="list-style: none; width: 100%; margin-left: 0px;"/></li>
     <li><img src="http://www.songdobeer.com/songdo_html/img/main/gallery_img5.jpg" alt="" /></li>
-    
+
 </ul>
 <style>
 
@@ -117,47 +117,34 @@ $(function() {
   </body>
       
               
-<script>
-  //토글 버튼 클릭시 슬라이드 상단에 마진 걸기
-  const navbarToggler = document.querySelector('.navbar-toggler');
-  const carousel = document.querySelector('#carouselExampleControls');
-  navbarToggler.addEventListener('click', () => {
-    if (carousel.classList.contains('slide-down')) {
-      carousel.classList.remove('slide-down');
-    } else {
-      carousel.classList.add('slide-down');
-    }
-  });
-  function adjustSlidePosition() {
-    if (window.innerWidth >= 992) {
-      if (carousel.classList.contains('slide-down')) {
-        carousel.classList.remove('slide-down');
+  <script>
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const carousel = document.querySelector('#carouselExampleControls');
+    if (navbarToggler !== null && carousel !== null) {
+      navbarToggler.addEventListener('click', () => {
+        if (carousel.classList.contains('slide-down')) {
+          carousel.classList.remove('slide-down');
+        } else {
+          carousel.classList.add('slide-down');
+        }
+      });
+      function adjustSlidePosition() {
+        if (carousel.classList.contains('slide-down') && window.innerWidth >= 992) {
+          carousel.classList.remove('slide-down');
+        }
       }
+      window.addEventListener('resize', () => {
+        adjustSlidePosition();
+      });
+      document.querySelector('.navbar-toggler').addEventListener('click', function() {
+        if (carousel.classList.contains('slide-down')) {
+          carousel.classList.remove('slide-down');
+        } else {
+          carousel.classList.add('slide-down');
+        }
+      });
     }
-  }
-  navbarToggler.addEventListener('click', () => {
-    if (carousel.classList.contains('slide-down')) {
-      carousel.classList.remove('slide-down');
-    } else {
-      carousel.classList.add('slide-down');
-    }
-  });
-  
-  window.addEventListener('resize', () => {
-    adjustSlidePosition();
-    if (carousel.classList.contains('slide-down')) {
-      carousel.classList.remove('slide-down');
-    }
-  });
-  
-  document.querySelector('.navbar-toggler').addEventListener('click', function() {
-    if (carousel.classList.contains('slide-down')) {
-      carousel.classList.remove('slide-down');
-    } else {
-      carousel.classList.add('slide-down');
-    }
-  });
-</script>
+  </script>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
