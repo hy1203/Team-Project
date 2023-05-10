@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Sigmar&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./taste.css">
     <title>IceCream</title>
   </head>
-<body style="background-color: rgb(252, 227, 227);">
-
+<body style="background-color: rgb(230, 155, 164);">
     <header>
-
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
           <img class="logo2" src="./image/logo.png">
@@ -24,9 +22,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
-
-                <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5501/menu1.html">Menu</a>
-
+                <a class="nav-link active" aria-current="page" href="#">Menu</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">알레르기</a>
@@ -44,55 +40,77 @@
                   <a class="nav-link" href="#">이벤트</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">장바구니</a>
+                  <a class="nav-link" href="#">장바구니</a>
               </li>
             </ul>
-
-            <img class="logo" src="./image/logo6.png" href="index.html">
-          
-            <a href="login.html" class="login"><button type="button" class="btn ms-2"><i class="bi bi-person-fill"></i>LOGIN</button></a>
-            </div>
+            <img class="logo" src="./image/logo.png">
               <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
               </form>
-            
-          
+          </div>
         </div>
       </nav>
-
-      <div class="animated-title" > 
-        <div class="track">
-          <div class="content" style="color:rgb(240, 202, 157);">Pstachio IceCream Shop is made by&nbsp;&nbsp; Kwon Dae young /&nbsp; Choi Ha Young /&nbsp;Lim Ye Rim /&nbsp;Lim Ji Hyun. &nbsp; This icecream makes me happy!</div>
-        </div>
-      </div>
     
     </header>
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="margin-top: -1%;">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="./image/back2.png" class="d-block w-100" alt="...">
+    
+    <div id="taste">
+      <ul class='comb'>
+        <li class="active taste-comb"><a class="taste-link" href="http://127.0.0.1:5501/taste_1.html">
+          무난한 조합
+        </a></li>
+        <li class="taste-comb"><a class="taste-link" href="http://127.0.0.1:5501/taste_2.html">
+          초코 덕후
+        </a></li>
+        <li class="taste-comb"><a class="taste-link" href="http://127.0.0.1:5501/taste_3.html">상큼 덕후</a></li>
+        <li class="taste-comb"><a class="taste-link" href="http://127.0.0.1:5501/taste_4.html">처음 보는 아이스크림 조합</a>
+        </li>
+        <li class="taste-comb"><a class="taste-link" href="http://127.0.0.1:5501/taste_5.html">
+          랜덤
+        </a></li>
+      </ul>
+      <div class="container">
+        <div class="ice-container">
+          <img class="ice-background" src="./image/tasteback.png" alt="">
+          <div class="ice-box-container">
+            <span class="ice-box">
+              <div class="ice-text">
+                <span>진짜 초코</span>
+              </div>
+              <img class="arrow-img" src="/image/left_arrow.png" alt="">
+            </span>
+            <span class="ice-box">
+              <img class="down-img" src="/image/down.png" alt="">
+               <div class="ice-text">
+                <span>초코시럽</span>
+                <span>많이 주세요</span>
+               </div>
+               <img class="arrow-img" src="/image/centter_arrow.png" alt="">
+            </span>
+            <span class="ice-box">
+              <div class="ice-text">
+                <span>바닐라에</span>
+                <span>뿌려진 초코</span>
+              </div>
+              <img class="arrow-img" src="/image/right_arrow.png" alt="">
+            </span>
+          </div>
+          <div class="ice-img-container">
+            <img class="ice-img" src="./image/ice_12.png" alt="">
+            <img class="ice-img" src="./image/ice_15.png" alt="">
+            <img class="ice-img" src="./image/ice_18.png" alt="">
+          </div>
+          <div>
+          </div>
         </div>
-        <div class="carousel-item">
-          <img src="./image/background2.png" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="./image/back3.png" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="./image/back4.png" class="d-block w-100" alt="...">
-        </div>
+        
       </div>
-   
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
+    
+          
+  
+
+    
   </body>
       
               
@@ -136,8 +154,10 @@
       carousel.classList.add('slide-down');
     }
   });
+  
 </script>
 
+<script src="/taste.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
