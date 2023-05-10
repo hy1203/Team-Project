@@ -93,6 +93,27 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+
+    <!-- 아래로 움직이는 슬라이드 -->
+    <link rel="stylesheet" href="http://www.songdobeer.com/songdo_html/lib/simplyscroll/simplyscroll.css">
+<script src="http://code.jquery.com/jquery-1.12.4.js" ></script>
+<script src="http://www.songdobeer.com/songdo_html/lib/simplyscroll/simplyscroll.min.js"></script>
+<script>
+$(function() {
+    $("#scroller").simplyScroll({
+        pauseOnHover:false
+    });
+});
+</script>
+<ul id="scroller">
+    <li><img src="./image/allmenu.png" style="width: 1665px; margin-left: -10px;" /></li>
+    <li><img src="http://www.songdobeer.com/songdo_html/img/main/gallery_img5.jpg" alt="" /></li>
+    
+</ul>
+<style>
+
+</style>
+
   </body>
       
               
@@ -148,3 +169,4 @@
 
 
 </html>
+
