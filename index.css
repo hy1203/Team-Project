@@ -7,7 +7,7 @@
     }
     
   }
-@media (max-width: 991.98px) {
+@media (max-width: 992px) {
     .navbar-collapse {
         position: relative;
         left: 500px;
@@ -30,7 +30,7 @@
         position: absolute;
         top: 100%;
         left: 0;
-        z-index: 1;
+        z-index: 10;
         width: 100%;
         background-color: #fff;
         padding: 10px;
@@ -80,12 +80,13 @@
 }
 .nav-link:hover {
     color: #dc3545;
-  }
+}
 .flex-box {
     display: flex;
     position: relative;
 }
 .navbar {
+
     height: 110px;
 }
 .navbar-nav {
@@ -114,13 +115,14 @@
 }
 
 .d-flex {
-    width: 30%;
+    width: 23%;
     display: flex;
     justify-content: flex-start;
 }
 .logo{
     position: relative;
     align-self: center;
+
     width: 18%;
     height: 80px;
 }
@@ -141,6 +143,7 @@
 #carouselExampleControls {
     position: relative;
 }
+
 .line{
     height: 49px; 
     background-color: aqua;
@@ -185,3 +188,14 @@ hr{
         overflow-y: hidden;
         background-color: rgb(252, 227, 227);
     }
+
+.login {
+    padding: 3px;
+    
+    font-family: 'Cafe24Danjunghae';
+    margin-right: 3px;
+    text-align: center;
+}
+.login:hover {
+    color: #46649B;
+  }
