@@ -35,7 +35,7 @@ button {
       box-sizing: border-box;
       border: 0px;
       box-shadow: 3px 3px;
-      background-color: #46649B;
+      background-color: #ed9ae1;
       margin-top: 30px;
     margin-bottom: 20px;
     border-radius: 4px;
@@ -62,7 +62,7 @@ button:hover{
     font-size: 50px;
 }
 a {
-    color: #46649B;
+    color: #e495de;
 }
 a:hover {
     color: #f9a19d;
