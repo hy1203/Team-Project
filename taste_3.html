@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="./taste.css">
     <title>IceCream</title>
   </head>
-<body style="background-color: rgb(230, 155, 164);">
+  <body style="background-color: rgb(230, 155, 164);">
     <header>
      
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
           <img class="logo2" src="./image/logo.png">
-          <a class="navbar-brand" href="http://127.0.0.1:5501/index.html">Pstachio</a>
+          <a class="navbar-brand" href="index.html">Pstachio</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -24,19 +24,18 @@
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
 
-                <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5501/menu1.html">Menu</a>
-
+                <a class="nav-link active" aria-current="page" href="menu1.html">Menu</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">알레르기</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="http://127.0.0.1:5501/taste_1.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="taste_1.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   꿀조합
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">인공지능 조합 추천</a></li>
-                  <li><a class="dropdown-item" href="http://127.0.0.1:5501/taste_1.html">기분파 조합</a></li>
+                  <li><a class="dropdown-item" href="taste_1.html">기분파 조합</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -63,19 +62,19 @@
     </header>
     <div id="taste">
       <ul class='comb'>
-        <li class="active taste-comb"><a class="taste-link" href="http://127.0.0.1:5501/taste_1.html">
+        <li class="taste-comb"><a class="taste-link" href="taste_1.html">
           무난한 조합
         </a></li>
-        <li class="taste-comb"><a class="taste-link" href="http://127.0.0.1:5501/taste_2.html">
+        <li class="taste-comb"><a class="taste-link" href="taste_2.html">
           초코 덕후
         </a></li>
-        <li class="taste-comb"><a class="taste-link" href="http://127.0.0.1:5501/taste_3.html">
+        <li class="taste-comb"><a class="taste-link" href="taste_3.html">
           상큼 덕후</a></li>
-        <li class="taste-comb"><a class="taste-link" href="http://127.0.0.1:5501/taste_4.html">
+        <li class="taste-comb"><a class="taste-link" href="taste_4.html">
           처음 보는 아이스크림 조합
         </a>
         </li>
-        <li class="taste-comb"><a class="taste-link" href="http://127.0.0.1:5501/taste_5.html">
+        <li class="taste-comb"><a class="taste-link" href="taste_5.html">
           랜덤
         </a></li>
       </ul>
@@ -90,21 +89,21 @@
                   <span>상큼터지는</span>
                   <span>레몬</span>
                 </div>
-                <img class="arrow-img" src="/image/left_arrow.png" alt="">
+                <img class="arrow-img" src="./image/left_arrow.png" alt="">
               </span>
               <span class="ice-box">
-                <img class="down-img" src="/image/down.png" alt="">
+                <img class="down-img" src="./image/down.png" alt="">
                  <div class="ice-text">
                   <span>톰과제리</span>
                  </div>
-                 <img class="arrow-img" src="/image/centter_arrow.png" alt="">
+                 <img class="arrow-img" src="./image/centter_arrow.png" alt="">
               </span>
               <span class="ice-box">
                 <div class="ice-text">
                   <span>홍시맛이</span>
                   <span>나서....</span>
                 </div>
-                <img class="arrow-img" src="/image/right_arrow.png" alt="">
+                <img class="arrow-img" src="./image/right_arrow.png" alt="">
               </span>
             </div>
             <div class="ice-img-container">
@@ -125,53 +124,34 @@
   </body>
       
               
-<script>
-  //토글 버튼 클릭시 슬라이드 상단에 마진 걸기
-  const navbarToggler = document.querySelector('.navbar-toggler');
-  const carousel = document.querySelector('#carouselExampleControls');
-  navbarToggler.addEventListener('click', () => {
-    if (carousel.classList.contains('slide-down')) {
-      carousel.classList.remove('slide-down');
-    } else {
-      carousel.classList.add('slide-down');
-    }
-  });
-  function adjustSlidePosition() {
-    if (window.innerWidth >= 992) {
-      if (carousel.classList.contains('slide-down')) {
-        carousel.classList.remove('slide-down');
+  <script>
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const carousel = document.querySelector('#carouselExampleControls');
+    if (navbarToggler !== null && carousel !== null) {
+      navbarToggler.addEventListener('click', () => {
+        if (carousel.classList.contains('slide-down')) {
+          carousel.classList.remove('slide-down');
+        } else {
+          carousel.classList.add('slide-down');
+        }
+      });
+      function adjustSlidePosition() {
+        if (carousel.classList.contains('slide-down') && window.innerWidth >= 992) {
+          carousel.classList.remove('slide-down');
+        }
       }
+      window.addEventListener('resize', () => {
+        adjustSlidePosition();
+      });
+      document.querySelector('.navbar-toggler').addEventListener('click', function() {
+        if (carousel.classList.contains('slide-down')) {
+          carousel.classList.remove('slide-down');
+        } else {
+          carousel.classList.add('slide-down');
+        }
+      });
     }
-  }
-  navbarToggler.addEventListener('click', () => {
-    if (carousel.classList.contains('slide-down')) {
-      carousel.classList.remove('slide-down');
-    } else {
-      carousel.classList.add('slide-down');
-    }
-  });
-  
-  window.addEventListener('resize', () => {
-    adjustSlidePosition();
-    if (carousel.classList.contains('slide-down')) {
-      carousel.classList.remove('slide-down');
-    }
-  });
-  
-  document.querySelector('.navbar-toggler').addEventListener('click', function() {
-    if (carousel.classList.contains('slide-down')) {
-      carousel.classList.remove('slide-down');
-    } else {
-      carousel.classList.add('slide-down');
-    }
-  });
-  
-  
-  
-
-
-  
-</script>
+  </script>
 <script src="/taste.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>

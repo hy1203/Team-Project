@@ -7,13 +7,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Sigmar&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="shoppingcart.css">
+    <script
+  src="https://code.jquery.com/jquery-3.6.4.min.js"
+  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+  crossorigin="anonymous"></script>
     <title>IceCream</title>
   </head>
-<body style="background-color: rgb(252, 227, 227);">
-
+<body style="background-color: rgb(254, 244, 244);">
     <header>
-
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
           <img class="logo2" src="./image/logo.png">
@@ -41,7 +43,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="game.html" >이벤트</a>
+                  <a class="nav-link" href="#">이벤트</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="shoppingcart.html">장바구니</a>
@@ -60,92 +62,41 @@
           
         </div>
       </nav>
-
-      <div class="animated-title" > 
-        <div class="track">
-          <div class="content" style="color:rgb(240, 202, 157);">Pstachio IceCream Shop is made by&nbsp;&nbsp; Kwon Dae young /&nbsp; Choi Ha Young /&nbsp;Lim Ye Rim /&nbsp;Lim Ji Hyun. &nbsp; This icecream makes me happy!</div>
-        </div>
-      </div>
     
     </header>
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="margin-top: -1%;">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="./image/back2.png" class="d-block w-100" alt="...">
+    <section class="shopping">
+      <section>
+        <div class="cartHeader">
+          <i class="bi bi-cart4 cart">장바구니</i>
+          <p class="content"><strong>장바구니</strong>>주문결제>주문완료</p>
         </div>
-        <div class="carousel-item">
-          <img src="./image/background2.png" class="d-block w-100" alt="...">
+        <div class="cart_option">
+          <ul class="cart_option_box">
+            <li class="selectAll">
+              <span><input type="checkbox" id="checkall">
+                <label for="checkall">전체선택</label></span>
+            </li>
+            <li>
+              <button class="btn_del deco"><span>선택삭제</span></button>
+            </li>
+          </ul>
         </div>
-        <div class="carousel-item">
-          <img src="./image/back3.png" class="d-block w-100" alt="...">
+      </section>
+      <div class="nocart">
+        <div class="empty">
+          <i class="bi bi-cart-x"></i>
+          <p class="text">담긴 상품이 없습니다.</p>
+          <a href ="menu1.html" class="deco1 btn_func"><i class="bi bi-plus-square"></i>  메뉴 담기</a>
         </div>
-        <div class="carousel-item">
-          <img src="./image/back4.png" class="d-block w-100" alt="...">
-        </div>
+        
       </div>
-   
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-
-    <!-- 아래로 움직이는 슬라이드 -->
-    <link rel="stylesheet" href="http://www.songdobeer.com/songdo_html/lib/simplyscroll/simplyscroll.css">
-<script src="http://code.jquery.com/jquery-1.12.4.js" ></script>
-<script src="http://www.songdobeer.com/songdo_html/lib/simplyscroll/simplyscroll.min.js"></script>
-<script>
-$(function() {
-    $("#scroller").simplyScroll({
-        pauseOnHover:false
-    });
-});
-</script>
-
-<ul id="scroller">
-    <li style="list-style: none;"><img src="./image/allmenu.png" style="width: 100%; margin-left: 0px;" /></li>
-    <li><img src="http://www.songdobeer.com/songdo_html/img/main/gallery_img5.jpg" alt="" /></li>
-
-</ul>
-<style>
-
-</style>
-
+      
+    </section>
+    <script src="shoppingcart.js"></script>
   </body>
       
               
-  <script>
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const carousel = document.querySelector('#carouselExampleControls');
-    if (navbarToggler !== null && carousel !== null) {
-      navbarToggler.addEventListener('click', () => {
-        if (carousel.classList.contains('slide-down')) {
-          carousel.classList.remove('slide-down');
-        } else {
-          carousel.classList.add('slide-down');
-        }
-      });
-      function adjustSlidePosition() {
-        if (carousel.classList.contains('slide-down') && window.innerWidth >= 992) {
-          carousel.classList.remove('slide-down');
-        }
-      }
-      window.addEventListener('resize', () => {
-        adjustSlidePosition();
-      });
-      document.querySelector('.navbar-toggler').addEventListener('click', function() {
-        if (carousel.classList.contains('slide-down')) {
-          carousel.classList.remove('slide-down');
-        } else {
-          carousel.classList.add('slide-down');
-        }
-      });
-    }
-  </script>
+
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
@@ -157,4 +108,3 @@ $(function() {
 
 
 </html>
-
