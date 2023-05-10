@@ -1,0 +1,81 @@
+main {
+    display: flex;
+    margin-top: 90px;
+}
+body {
+    background-image: url('./image/signupback.png');
+    background-size: cover;
+}
+.myform{
+    background-color: rgb(252, 252, 242);
+    text-align: center;
+    width: 600px;
+    height: 560px;
+    border-radius: 25px;
+    margin: auto;
+    animation: fadeInDown 1s;
+}
+input {
+    margin-top: 10px;
+    background: transparent;
+    border-right:0px; 
+    border-top:0px; 
+    border-left:0px;
+    padding: 2px 3px;
+}
+@font-face {
+    font-family: 'Cafe24Danjunghae';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+form {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+.logo{
+    padding-top: 20px;
+            font-family: 'Cafe24Danjunghae';
+            font-size: 40px;
+}
+button {
+    width: 150px;
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 0px;
+    box-shadow: 3px 3px;
+    background-color: #f9a19d;
+    margin-top: 30px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+.submittext {
+  color:white;
+  font-family: 'Cafe24Danjunghae';
+  margin-top:20px;
+  text-align: center;
+}
+.signup {
+    margin-top: 20px;
+}
+.su {
+    text-decoration-line: none;
+}
+a {
+    color: #f9a19d;
+}
+a:hover {
+    color: #46649B;
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
