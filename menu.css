@@ -109,4 +109,91 @@ color: #46649B;
 }
 .banner_wraper { height: 300px; width: 1680px; position: absolute; overflow: hidden; }
 .banner_wraper img { height: 250px; margin: 30px; position: absolute; border-radius: 100px 100px 100px 100px;}
+button {
+    background-color: #F9B514;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Cafe24Danjunghae';
+  }
 
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal .bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .modalBox {
+    position: absolute;
+    background-image: url(./image/1.png);
+    background-size: contain;
+    border-radius: 12px;
+    width: 500px;
+    height: 500px;
+    padding-top: 345px;
+    text-align: center;
+  }
+
+  .modalBox.put_cart {
+    display: inline;
+    width: 88px;
+    height: 33px;
+  }
+  input {
+    width: 70px;
+    height: 35px;
+    text-align: center;
+  }
+  .buy{
+    margin-top:29px;
+    font-size: 18px;
+  }
+    .hidden {
+        display: none;
+    }
+@font-face {
+      font-family: 'Cafe24Danjunghae';
+      src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff") format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+  .x{
+    margin-top: 10px;
+    font-size: 28px;
+  }
+  .cart {
+    position: relative;
+}
+.cart:before{
+    content: attr(data-cart);
+    background: #34404b;
+    position: absolute;
+    left: 107%;
+    top: 9px;
+    transform: translateX(-50%);
+    width: 18px;
+    height: 19px;
+    border-radius: 50%;
+    font-size: 10px;
+    color: #fff;
+    text-align: center;
+    text-indent: 0;
+    line-height: 21px;
+}
+.move_cart {
+    width: 120px;
+    height: 35px;
+    font-size: 17px;
+    margin-top: 8px;
+}
