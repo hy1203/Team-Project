@@ -1,158 +1,99 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="ko">
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Sigmar&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="http://www.songdobeer.com/songdo_html/lib/simplyscroll/simplyscroll.css">
+    <link rel="stylesheet" href="./index.css">
     <title>IceCream</title>
-</head>
-<body style="background-color: rgb(235, 67, 67);">
+  </head>
+  <body style="background-color: rgb(252, 227, 227);">
     <header>
-      <div>
-          <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 150px;">
-          <!-- <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <img class="logo2" src="./image/logo.png">
+          <a class="navbar-brand" href="index.html">Pstachio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button> -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Menu <span class="sr-only">(current)</span></a>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="menu1.html">Menu</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">알레르기</a></li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="taste_1.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">꿀조합</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">인공지능 조합 추천</a></li>
+                  <li><a class="dropdown-item" href="taste_1.html">기분파 조합</a></li>
+                </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="allergy.html">알레르기</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="taste_1.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">이벤트</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="poop.html">피하기</a></li>
+                  <li><div class="dropdown-item" id="open-popup" href="game.html">랜덤박스</div></li>
+                </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">꿀 조합</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">이벤트</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">장바구니</a>
-              </li>
+              <li class="nav-item"><a class="nav-link" href="shoppingcart.html">장바구니</a></li>
             </ul>
-            <img class="logo" src="https://i.imgur.com/w3LIn7F.png">
-
+            <img class="logo" src="./image/logo6.png" href="index.html">
+            <a href="login.html" class="login"><button type="button" class="btn ms-2"><i class="bi bi-person-fill"></i>LOGIN</button></a>
           </div>
-          <form class="form-inline">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </nav>
-
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+      <div class="animated-title" > 
+        <div class="track">
+          <div class="content" style="color:rgb(240, 202, 157);">Pstachio IceCream Shop is made by&nbsp;&nbsp; Kwon Dae young /&nbsp; Choi Ha Young /&nbsp;Lim Ye Rim /&nbsp;Lim Ji Hyun. &nbsp; This icecream makes me happy!</div>
+        </div>
       </div>
-    </header>             
-            <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
-<!-- <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_iYA1JNzh6r.json" background="#EB4343"  speed="0.8" class="box1"  loop autoplay></lottie-player> -->
-            <!-- </div> -->
-            <!-- <div class="font1">Pstachio <br/>IceCream Shop <br/>Open</div> -->
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="height: 500px;">
-              <!-- <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-
-              </ol> -->
-              <div class="carousel-inner" style="height: 867px;">
-                <div class="carousel-item active">
-                  <img src="https://i.imgur.com/GXN8iy1.png" class="d-block">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://i.imgur.com/1OTtOx4.png" class="d-block">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://i.imgur.com/fTQJkMO.png" class="d-block">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://i.imgur.com/nazoSmh.png" class="d-block">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://i.imgur.com/Ouhuaou.png" class="d-block">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://i.imgur.com/C1CjywT.png" class="d-block">
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </button>
-            </div>
+    </header>
+    
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="margin-top: -1%;">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./image/back2.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./image/background2.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./image/back3.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./image/back4.png" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    
+    <ul id="scroller">
+      <li style="list-style: none;"><img src="./image/allmenu.png" style="width: 100%; margin-left: 0px;" /></li>
+      <li><img src="http://www.songdobeer.com/songdo_html/img/main/gallery_img5.jpg" alt="" /></li>
+    </ul>
+  </body>
+    
+  <script src="http://code.jquery.com/jquery-1.12.4.js" ></script>
+  <script src="http://www.songdobeer.com/songdo_html/lib/simplyscroll/simplyscroll.min.js"></script>
+  <script src="./index.js"></script>
+  <script src="./random_box.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
 </body>
-<style>
-  .carousel-item{
-    width: auto;
-    height: 1000px;
-  }
-@font-face {
-    font-family: 'Cafe24Danjunghae';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-  .navbar-nav{
-    font-family: 'Cafe24Danjunghae';
-    margin-left: 10%;
-    font-size: 20px;
-    margin-top: 60px;
-  }
-  .logo{
-    width: 300px;
-    margin-left: 18%;
-  }
-    @font-face {
-    font-family: 'EF_jejudoldam';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
-    font-style: normal;
-}
-.navbar{
-  text-align: center;
-}
-    .font1{
-        font-family: 'EF_jejudoldam';
-        font-size: 90px;
-        color:rgb(110, 164, 245);
-        margin-top: 15%;
-        margin-left: -8%;
-        text-align: center;
-        float: left;
-    }
-
-    .box1{
-        width: 55%;
-        height: 100%;
-        margin-left: -8%; 
-        margin-top: -10%;
-        float: left;
-
-    }
-    .box2{
-        width: 900px;
-        height: auto;
-        background-color: rgb(110, 164, 245);
-        float: left;
-    }
-</style>
-
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-</body>
-
-</html>
-
-<script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
-
-
 </html>

@@ -1,0 +1,211 @@
+.img-box {
+    width: 15%;
+}
+@font-face {
+    font-family: 'Cafe24Danjunghae';
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'EF_jejudoldam';
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2") format('woff2');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cafe24Danjunghae';
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.font1 {
+    font-family: 'EF_jejudoldam';
+    font-size: 90px;
+    color: rgb(110, 164, 245);
+    margin-top: 15%;
+    margin-left: -8%;
+    text-align: center;
+    float: left;
+}
+
+.font3{
+    font-family: 'omyu_pretty';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.box1 {
+    width: 55%;
+    margin-left: -8%;
+    margin-top: -10%;
+    /* float: left; */
+
+}
+.box2 {
+    width: 900px;
+    height: auto;
+    background-color: rgb(110, 164, 245);
+    float: left;
+}
+
+.box3 {
+    height: 300px;
+}
+
+.text-center {
+    text-align: center;
+}
+.img-box {
+    width: 210px;
+    height: 210px;
+    border-radius: 80px;
+    background-color: rgb(249, 249, 248);
+    border: 1px solid rgb(235, 67, 67);
+}
+.article-box {
+    width: auto;
+    margin: 20px;
+    padding: 10px;
+    background-color: rgb(235, 67, 67);
+    border: 1px solid rgb(255, 149, 253);
+    border-radius: 10px;
+    display: inline-block;
+}
+section {
+    margin-top: 20%;
+
+}
+.menu {
+    margin-top: -20%;
+}
+br {
+    height: 40%;
+}
+.form-inline {
+    margin-right: 10%;
+}
+.menuimg {
+    margin: 5%;
+    display: flex;
+}
+hr {
+    background-color: rgb(237, 144, 123);
+    height: 1px;
+    width: 1500px;
+}
+.login {
+    padding: 3px;
+    
+    font-family: 'Cafe24Danjunghae';
+    margin-right: 3px;
+    text-align: center;
+}
+.login:hover {
+color: #46649B;
+}
+
+.banner_wraper img { height: 250px; margin: 30px; position: absolute; border-radius: 100px 100px 100px 100px;}
+
+button {
+    background-color: #F9B514;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Cafe24Danjunghae';
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal .bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .modalBox {
+    position: absolute;
+    background-image: url(./image/1.png);
+    background-size: contain;
+    border-radius: 12px;
+    width: 500px;
+    height: 500px;
+    padding-top: 345px;
+    text-align: center;
+  }
+
+  .modalBox.put_cart {
+    display: inline;
+    width: 88px;
+    height: 33px;
+  }
+  input {
+    width: 70px;
+    height: 35px;
+    text-align: center;
+  }
+  .buy{
+    margin-top:29px;
+    font-size: 18px;
+}
+.hidden {
+    display: none;
+}
+
+.x{
+  margin-top: 10px;
+  font-size: 28px;
+}
+.cart {
+    position: relative;
+}
+.cart:before{
+    content: attr(data-cart);
+    background: #34404b;
+    position: absolute;
+    left: 107%;
+    top: 9px;
+    transform: translateX(-50%);
+    width: 18px;
+    height: 19px;
+    border-radius: 50%;
+    font-size: 10px;
+    color: #fff;
+    text-align: center;
+    text-indent: 0;
+    line-height: 21px;
+}
+.move_cart {
+    width: 120px;
+    height: 35px;
+    font-size: 17px;
+    margin-top: 8px;
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bottom_nav {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+}

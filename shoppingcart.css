@@ -1,0 +1,220 @@
+@media (min-width: 992px) {
+  .logo {
+    position: relative;
+  }
+  .logo2 {
+      display: none;
+  }
+}
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+      position: relative;
+      left: 500px;
+  }
+  .logo {
+      display: none;
+  }
+  .navbar-brand {
+      display: none;
+  }
+  .nav-link {
+      display: flex;
+      padding: 0.5rem 1rem;
+      margin: 0 0.25rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: color 0.3s ease-in-out;
+  }
+  .navbar-collapse {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .d-flex {
+      width: 35%;
+      align-self: start;
+  }
+  .navbar-nav {
+      display: flex;
+      position: relative;
+      margin: 0;
+      width: 40%;
+      font-size: 16px;
+      margin-right: 0;
+      justify-content: space-evenly;
+  }
+  .navbar-nav.show {
+      display: flex;
+      flex-direction: column;
+  }
+  .dropdown-menu.show {
+      display: flex;
+      width: 40%;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+  }
+}
+.navbar-brand {
+  color: pistachio;
+}
+.d-block {
+  width:100%;
+}
+.carousel-item{
+  position: relative;
+  width: 100%;
+}
+@font-face {
+  font-family: 'Cafe24Danjunghae';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.nav-link:hover {
+  color: #dc3545;
+}
+.flex-box {
+  display: flex;
+  position: relative;
+}
+.navbar {
+  height: 100px;
+}
+.navbar-nav {
+  font-family: 'Cafe24Danjunghae';
+}
+.navbar-brand {
+  font-family: 'Cafe24Danjunghae';
+}
+.navbar-collapse {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+@font-face {
+  font-family: 'EF_jejudoldam';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
+  font-style: normal;
+}
+.navbar{
+  text-align: center;
+  display: flex;
+}
+
+.d-flex {
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+}
+.logo{
+  position: relative;
+  align-self: center;
+  width: 25%;
+  height: 80px;
+}
+.logo2 {
+  margin-top: 10px;
+  width: 30%;
+}
+
+.scart {
+  font-family: 'Cafe24Danjunghae';
+  font-size: 45px;
+  position: relative;
+  top: 10px;
+  left: 90px;
+}
+.content {
+  font-family: 'Cafe24Danjunghae';
+  font-size: 25px;
+  float: right;
+  margin-top: 26px;
+  margin-right: 100px;
+}
+.cartHeader {
+  padding: 18px 0 20px;
+  border-bottom: 1px solid #00000010;
+}
+.cart_option_box {
+  list-style:none;
+  vertical-align: top;
+  margin-top: 15px;
+  display: flex;
+  height: 20px;
+}
+span{
+  font-family: 'Cafe24Danjunghae';
+  color: #7F8590;
+  font-size: 18px;
+  letter-spacing: 2.5px;
+  height: 20px;
+  margin-left: 24px;
+}
+.deco {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  
+}
+.cart_option li::after {
+  content: "|";
+  float: right;
+  color: #ccc;
+  margin-right: -17px;
+}
+.cart_option li:last-child::after {
+  content: "";
+}
+.nocart{
+  background-color: white;
+  width: 90%;
+  height:700px;
+  margin: 0px 60px;
+  position: relative;
+
+}
+p {
+  font-size: 30px;
+}
+.text{
+  font-weight: 700;
+}
+.bi-cart-x {
+  font-size: 90px;
+  color:#a5a7ac;
+}
+.empty{
+  height: 100%;
+  display: flex;
+  text-align: center;
+  padding: 0;
+  justify-content: center;
+  flex-direction: column;
+}
+.deco1 {
+  font-family: 'Cafe24Danjunghae';
+  font-size: 20px;
+  border-radius: 5px;
+  text-decoration-line: none;
+  text-shadow: 1px 1px;
+  letter-spacing: 2.5px;
+  color:rgb(40, 129, 245)
+}
+.login {
+  padding: 3px;
+  box-shadow: 1px 1px black;
+  font-family: 'Cafe24Danjunghae';
+  margin-right: 3px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+}

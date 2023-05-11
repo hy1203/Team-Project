@@ -1,0 +1,17 @@
+.poopbox{
+    width: 72%; 
+    height: 72%; 
+    background-color: #9FB4FF; 
+    position: absolute; 
+    margin-top: 5%; 
+    margin-left: 15%;
+    margin-right: 10%;
+    border-radius: 20px 20px 20px 20px;
+
+}
+.boxborder{
+    border-style: solid;
+    border-width: 7px;
+    border-color: rgb(254, 241, 248);
+
+}
