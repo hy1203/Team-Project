@@ -1,0 +1,215 @@
+body{
+    background-color:#fee5ca ;
+    /* background-color:#9dcef6; */
+}
+
+.carousel-item{
+    width: auto;
+    height: 1000px;
+  }
+@font-face {
+    font-family: 'Cafe24Danjunghae';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+  .navbar-nav{
+    font-family: 'Cafe24Danjunghae';
+    margin-left: 10%;
+    font-size: 20px;
+    margin-top: 60px;
+  }
+  .logo{
+    width: 300px;
+    margin-left: 18%;
+  }
+    @font-face {
+    font-family: 'EF_jejudoldam';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
+    font-style: normal;
+}
+.navbar{
+  text-align: center;
+}
+    .font1{
+        font-family: 'EF_jejudoldam';
+        font-size: 90px;
+        color:rgb(110, 164, 245);
+        margin-top: 15%;
+        margin-left: -8%;
+        text-align: center;
+        float: left;
+    }
+
+    .box1{
+        width: 55%;
+        height: 100%;
+        margin-left: -8%; 
+        margin-top: -10%;
+        float: left;
+
+    }
+    .box2{
+        width: 900px;
+        height: auto;
+        background-color: rgb(110, 164, 245);
+        float: left;
+    }
+
+
+    /* #table-data tr{
+        display: none;
+      } */
+
+
+    .textbox{
+        font-family: 'establishRoomNo703OTF';
+        color: white;
+        width: 100%;
+        font-size:5rem;
+        margin-top:14rem;
+        text-align: center;
+        position: absolute;
+        
+    }
+    .imgbox{
+        display: flex;
+        justify-content: center;
+        z-index:10 ;
+        width: 100%;
+        text-align: center;
+        
+    }
+
+    .imgicbox{
+        display: flex;
+        justify-content: center;
+        z-index:10 ;
+        width: 100%;
+        position: absolute;
+        margin-top: 347px;
+       
+    }
+    .ftbutton{
+        border: none;
+        width: 400px;
+        height: 60px;
+        
+    }
+  
+    .imgicecr{
+        width: 700px;
+        /* width:36%; */
+        /* margin-left:30rem; */
+        /* position: absolute; */
+       
+    }
+
+    .wavebox{
+        display: flex;
+        justify-content: center;
+        z-index:10 ;
+        position: relative;
+        /* background-color: aqua; */
+    }
+
+
+    .wave{
+        width: 40%;
+    }
+
+
+    .buttonbox{
+        display: flex;
+        justify-content: center;
+        z-index:10 ;
+        position: relative;
+        margin: 40px
+    }
+    .searchbox{
+        position: relative;
+        margin-top: 7rem;
+    }
+
+    .list_pdbox{
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        display: none;
+
+    }
+
+    
+    
+    /* .cloudbox{
+         position: relative;
+
+    } */
+ 
+    @font-face {
+        font-family: 'establishRoomNo703OTF';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishRoomNo703OTF.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+
+    .shootingStar{
+        width: 200px;
+        height: 200px;
+    }
+
+    .starbox{
+        /* display: none; */
+        width: 100%;
+        display: flex;
+    }
+
+    .starbox1-star{
+
+        animation-duration: 3s;
+        /* animation-iteration-count: 10; */
+        animation-name: movingstar;
+      
+    }
+    
+    .starbox2-star{
+        animation-duration: 3s;
+        /* animation-iteration-count: 10; */
+        animation-name: movingstar;
+       
+        text-align: right;
+    }
+
+    /* 영양정보 타이틀 */
+    .nut-infoTitle{ 
+        text-align: center;
+    }
+    
+    /* 영양정보 제품명, 알레르기 box */
+    .nut-infobox{ 
+        text-align: center;
+    }
+
+  
+
+
+
+
+
+
+
+    @keyframes movingstar{
+        from{
+           transform: translateY(0);
+           /* animation-timing-function: cubic-bezier(1,0,0.8,1); */
+        }
+        to{
+            transform: translateY(400px);
+        }
+
+
+    }
+
+
