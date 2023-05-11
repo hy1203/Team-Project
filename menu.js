@@ -1,3 +1,4 @@
+
 //client rolling banner
 window.onload = function () {
     var bannerLeft = 0;
