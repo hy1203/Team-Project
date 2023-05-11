@@ -109,20 +109,8 @@
         $('.modalBox').css('background-image', `url(./image/${i + 1}.png)`);
       })
     }
-    $('.closeBtn').click(function () {
-      $('.modal').addClass('hidden');
-    })
-    $('.move_cart').click(function () {
-      $(location).attr('href', './shoppingcart.html');
-    })
-    var menunum =0;
-    $('.buy').click(function() {
-      const num = $('.count').val();
-      menunum = menunum+Number(num);
-      alert(`${num}개가 정상적으로 담겼습니다.`);
-      $('.count').val('1');
-      $('.cart').attr('data-cart',`${menunum}`);
-    });
+  
+
 </script>
 
   <script src="./index.js"></script>
