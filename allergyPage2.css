@@ -1,0 +1,223 @@
+:root {
+	--checkbox-size: 100px;
+	--bg-color: #FFA69E;
+	--checkbox-color: #FFFFFF;
+	--hover-color: #FF686B;
+	--tick-color: #84DCC6;
+}
+
+body{
+    background-color:#fee5ca ;
+    /* background-color:#9dcef6; */
+}
+
+.carousel-item{
+    width: auto;
+    height: 1000px;
+  }
+@font-face {
+    font-family: 'Cafe24Danjunghae';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+  .navbar-nav{
+    font-family: 'Cafe24Danjunghae';
+    margin-left: 10%;
+    font-size: 20px;
+    margin-top: 60px;
+  }
+  .logo{
+    width: 300px;
+    margin-left: 18%;
+  }
+    @font-face {
+    font-family: 'EF_jejudoldam';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
+    font-style: normal;
+}
+.navbar{
+  text-align: center;
+}
+    .font1{
+        font-family: 'EF_jejudoldam';
+        font-size: 90px;
+        color:rgb(110, 164, 245);
+        margin-top: 15%;
+        margin-left: -8%;
+        text-align: center;
+        float: left;
+    }
+
+    .box1{
+        width: 55%;
+        height: 100%;
+        margin-left: -8%; 
+        margin-top: -10%;
+        float: left;
+
+    }
+    .box2{
+        width: 900px;
+        height: auto;
+        background-color: rgb(110, 164, 245);
+        float: left;
+    }
+
+
+    /* #table-data tr{
+        display: none;
+      } */
+
+
+      .checkbox{
+
+      }
+    
+
+    .imgcircleBox{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        z-index:10 ;
+        position: relative;
+    }
+
+    .imgcircle{
+        width: 1068px;
+        margin-top: 116px;
+        position: absolute;
+        z-index: 1;
+        
+    }
+    .searchbox{
+        margin-top: 500px;
+        /* background-color: aqua; */
+        position: absolute;
+        width: 100%;
+        z-index: 12;
+       
+    }
+
+    .nut-infoTitle h1{
+        font-size: 58px;
+        color: white;
+        font-family: 'TheJamsil5Bold';
+    }
+    @font-face {
+        font-family: 'TheJamsil5Bold';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+    }
+    .nut-infoTitle h2{
+      
+        color:white;
+        font-family: 'KCC-Ganpan';
+    }
+    .nut-infobox label{
+        font-family: 'KCC-Ganpan';
+        color: white;
+        margin: 10 10px;
+    }
+
+    input{
+        font-family: 'KCC-Ganpan';
+        color:white;
+    }
+    @font-face {
+        font-family: 'KCC-Ganpan';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+   #pdname{
+        width: 600px;
+        height: 50px;
+        font-size: 17px;
+        border: 0;
+        border-radius: 6px;
+        outline: none;
+        padding-left: 10px;
+        background-color: #9dcef6;
+        
+      }
+
+
+    .nut-info2{
+        display: flex;
+        justify-content: center;
+        margin: 22px;
+
+
+    }
+
+    .nut-info2 label{
+        margin: 1px 5px;
+
+
+    }
+
+    .checkList input{
+        margin: 1px 3px;
+
+    }
+
+    div.checkList{
+        width: 787px;
+        height: 43px;
+        font-size: 17px;
+        border: 0;
+        border-radius: 6px;
+        outline: none;
+        padding-left: 10px;
+        background-color: #9dcef6;
+        padding-top: 9px;
+    }
+    #search{
+        z-index:100;
+    }
+
+    .list_pdbox{
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        display: none;
+
+    }
+
+    /* 영양정보 타이틀 */
+    .nut-infoTitle{ 
+        text-align: center;
+    }
+    
+    /* 영양정보 제품명, 알레르기 box */
+    .nut-infobox{ 
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* 모달창 */
+
+   
+
+
+
+
+
+
+    @keyframes movingstar{
+        from{
+           transform: translateY(0);
+           /* animation-timing-function: cubic-bezier(1,0,0.8,1); */
+        }
+        to{
+            transform: translateY(400px);
+        }
+
+
+    }
+
+

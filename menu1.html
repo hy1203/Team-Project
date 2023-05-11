@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,7 +42,7 @@
         </li>
         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="./taste_1.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">이벤트</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">피하기 게임</a></li>
+            <li><a class="dropdown-item" href="poop.html">피하기 게임</a></li>
             <li><div class="dropdown-item" id="open-popup" href="./game.html">랜덤 박스</div></li>
           </ul>
         </li>
@@ -82,17 +81,50 @@
     <div class="box3"></div>
     <hr />
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <div class="container" style="width: auto;"><div class="row" style="width:auto;"></div></div>
-    <nav aria-label="..." style="margin-left: 48%;">
+    <div class="container" style="width: 100%;"><div class="row" style="width:100%;"></div></div>
+    <div class="bottom_nav">
       <ul class="pagination">
         <li class="page-item active"><a class="page-link" href="./menu1.html">1</a></li>
         <li class="page-item" aria-current="page"><a class="page-link" href="./menu2.html">2</a></li>
         <li class="page-item"><a class="page-link" href="./menu3.html">3</a></li>
         <li class="page-item"><a class="page-link" href="./menu2.html">Next</a></li>
       </ul>
-    </nav>
+    </div>
   </body>
-  
+  <script>
+    var products = [
+    { id: 0, img: "./image/1.png", price: 7000, title: "나무에 달린 딸기" },
+    { id: 1, img: "./image/2.png", price: 8000, title: "톰과 체리" },
+    { id: 2, img: "./image/3.png", price: 6000, title: "닐라닐라 바닐라" },
+    { id: 3, img: "./image/4.png", price: 6000, title: "꾸덕꾸덕 황치즈" },
+    { id: 4, img: "./image/5.png", price: 6000, title: "바나나킥 갈아넣은 바나나" },
+    { id: 5, img: "./image/6.png", price: 6000, title: "아메리카노 말고 바닐라라떼" },
+    { id: 6, img: "./image/7.png", price: 6000, title: "요거트" },
+    { id: 7, img: "./image/8.png", price: 6000, title: "녹차마루" }
+    ];
+    products.forEach((a, i) => {var 템플릿 = `<div class="col-sm-3 font3" ><img src="${products[i].img}" class="w-78 menuimg openbtn${i}" style="width: 100%; border-radius: 30px 30px 30px 30px;"><h5 class="font4 name${i}">${products[i].title}</h5><p class="font4">가격 : ${products[i].price}</p></div>`;$('.row').append(템플릿)});
+    for (let i = 0; i < 8; i++) {
+      $(`.openbtn${i}`).click(function () {
+        $('.modal').removeClass('hidden');
+        $('.modalBox').css('background-image', `url(./image/${i + 1}.png)`);
+      })
+    }
+    $('.closeBtn').click(function () {
+      $('.modal').addClass('hidden');
+    })
+    $('.move_cart').click(function () {
+      $(location).attr('href', './shoppingcart.html');
+    })
+    var menunum =0;
+    $('.buy').click(function() {
+      const num = $('.count').val();
+      menunum = menunum+Number(num);
+      alert(`${num}개가 정상적으로 담겼습니다.`);
+      $('.count').val('1');
+      $('.cart').attr('data-cart',`${menunum}`);
+    });
+</script>
+
   <script src="./index.js"></script>
   <script src="./menu.js"></script>
   <script src="./random_box.js"></script>
