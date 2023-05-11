@@ -1,8 +1,8 @@
 var canvas=document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
-canvas.width=window.innerWidth - 100;
-canvas.height=window.innerHeight - 100;
+canvas.width=window.innerWidth - 300;
+canvas.height=window.innerHeight - 210;
 
 ctx.fillStyle = 'red';
 ctx.fillRect(10, 10, 100, 100);
@@ -11,8 +11,8 @@ var img2=new Image();
 img2.src='./image/man.png';
 
 var dino={
-    x : 500,
-    y: 150,
+    x : 300,
+    y: 380,
     width: 200,
     height: 160,
     draw(){
@@ -36,8 +36,8 @@ img1.src='./image/virus.png';
 class Cactus
 {
     constructor(){
-        this.x=1100;
-        this.y=350;
+        this.x=1000;
+        this.y=400;
         this.width=60;
         this.height=60;
     }
@@ -71,7 +71,7 @@ function 프레임마다실행할거(){
 
     cactus여러개.forEach((a, i, o)=>{
         //x좌표가 0미만이면 제거
-        if(a.x<500){
+        if(a.x<250){
             o.splice(i, 1)
             result++;
         }
@@ -79,7 +79,7 @@ function 프레임마다실행할거(){
         충돌하냐(dino, a);
         a.draw();
         if((result==3) && (dino.y=200)){
-            alert("축하합니다.");
+            alert("성공입니다! 장바구니에 50%할인권을 확인하세요!");
             cancelAnimationFrame(animation)
         }
        
@@ -87,7 +87,7 @@ function 프레임마다실행할거(){
 
     //점프기능
     if(점프중==true) {
-        dino.y-=2 ;//dino가 점프하는 속도
+        dino.y-=3 ;//dino가 점프하는 속도
         점프timer++;
     }
     if(점프중 == false){
@@ -95,7 +95,7 @@ function 프레임마다실행할거(){
         dino.y+=2;
         }
     }
-    if(점프timer > 100){
+    if(점프timer > 80){
         점프중=false;
         점프timer=0;
     }
@@ -113,6 +113,8 @@ function 충돌하냐(dino, cactus){
     if(x축차이 < 0 && y축차이<0){
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         cancelAnimationFrame(animation)
+        alert("아쉽게도 실패 하셨네요 ㅠ.ㅠ");
+
     }
 
 }
