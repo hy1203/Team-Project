@@ -104,12 +104,10 @@ body{
         color: white;
         font-family: 'TheJamsil5Bold';
     }
-    @font-face {
-        font-family: 'TheJamsil5Bold';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
-        font-weight: 700;
-        font-style: normal;
-    }
+
+
+    
+
     .nut-infoTitle h2{
       
         color:white;
@@ -125,12 +123,7 @@ body{
         font-family: 'KCC-Ganpan';
         color:white;
     }
-    @font-face {
-        font-family: 'KCC-Ganpan';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
-        font-weight: normal;
-        font-style: normal;
-    }
+
 
    #pdname{
         width: 600px;
@@ -199,10 +192,44 @@ body{
         justify-content: center;
     }
 
-    /* 모달창 */
+    .menuindex{
+        display: flex;
+        justify-content: center;
+        z-index:10 ;
+        width: 100%;
+        margin-top: 493px;
+        font-family: 'TheJamsil5Bo';
 
+    }
+
+    .menuindex table{
+        border-radius: 20px;
+        width: 1295px;
+        background-color:pink;
+        font-family: 'TheJamsil5Bold';
+}
+
+
+.menuindex table h1{
+    
+    background-color:green;
    
+}
 
+
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KCC-Ganpan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
 
 
