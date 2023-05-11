@@ -18,16 +18,30 @@ for (let i = 0; i < 8; i++) {
 $('.closeBtn').click(function () {
     $('.modal').addClass('hidden');
 })
+$('.bg').click(function () {
+    $('.modal').addClass('hidden');
+})
 $('.move_cart').click(function () {
     $(location).attr('href', './shoppingcart.html');
 })
 var menunum =0;
 $('.buy').click(function() {
     const num = $('.count').val();
-    menunum = menunum+Number(num);
-    alert(`${num}개가 정상적으로 담겼습니다.`);
-    $('.count').val('1');
-    $('.cart').attr('data-cart',`${menunum}`);
+    if(num >5){
+        alert('담을 수 있는 갯수를 초과하였습니다.');
+        $('.count').val('1');
+    }
+    else{
+        menunum = menunum+Number(num);
+        if(menunum >15){
+            alert('구매하실 수 있는 갯수를 초과했습니다.');
+            menunum = menunum-Number(num);
+        }else{
+            alert(`${num}개가 정상적으로 담겼습니다.`);
+        $('.count').val('1');
+        $('.cart').attr('data-cart',`${menunum}`);
+        } 
+    } 
 })
 
 //client rolling banner
