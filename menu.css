@@ -107,7 +107,7 @@ text-align: center;
 .login:hover {
 color: #46649B;
 }
-.banner_wraper { height: 300px; width: 1680px; position: absolute; overflow: hidden; }
+.banner_wraper { height: 300px; width: 1630px; position: absolute; overflow: hidden; }
 .banner_wraper img { height: 250px; margin: 30px; position: absolute; border-radius: 100px 100px 100px 100px;}
 button {
     background-color: #F9B514;
