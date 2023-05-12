@@ -1,50 +1,32 @@
-// //버튼 search 가져옴
+//dom으로 요소 가져오기
 const search=document.querySelector('#search');
-
-
 const menu=document.querySelector('#menuBT');
 const menuList = document.querySelector('.menuindex');
 let isMenuVisible = false;
 let table = document.getElementsByClassName('.table-data');
-
-
-
-
-// //modal 가져오기
-// const modal = document.querySelector('.mol');
-
-// //close 가져오기
-// const close = document.querySelector('.modla_closeBtn');
-
 const pdnameInput = document.querySelector('#pdname');
 const checkboxes = document.querySelectorAll('.checktext');
 
+//입력값 input이 눌리면 이벤트 시작
 pdnameInput.addEventListener('input', function() {
-  const searchKeyword = pdnameInput.value.trim();
-  const rows = document.querySelectorAll('#table-data tbody tr');
-  
-  rows.forEach(row => {
+  const searchKeyword = pdnameInput.value.trim(); //이름값을 공백없이 가져온다.
+  const rows = document.querySelectorAll('#table-data tbody tr'); //row에 tr값을 모두 가져온다.
+  rows.forEach(row => { //row의 값만큼 반복
     const productName = row.querySelector('.title').innerText;
     const allergy = row.querySelector('.Allergic').innerText;
-    const shouldDisplay = productName.includes(searchKeyword);
-    
+    const shouldDisplay = productName.includes(searchKeyword);    
     if (shouldDisplay) {
       const allergyList = allergy.split(', ');
       let output = `${productName}: `;
-      
       allergyList.forEach(item => {
         output += `${item}, `;
       });
-      
       output = output.slice(0, -2); // 마지막 쉼표 및 공백 제거
-      
       const resultContainer = document.createElement('div');
       resultContainer.innerText = output;
-      
       row.appendChild(resultContainer);
     } else {
       const resultContainer = row.querySelector('div');
-      
       if (resultContainer) {
         row.removeChild(resultContainer);
       }
@@ -52,6 +34,7 @@ pdnameInput.addEventListener('input', function() {
   });
 });
 
+//체크박스를 처리해주는 forEach
 checkboxes.forEach(checkbox => {
   checkbox.addEventListener('change', function() {
     const checkedValues = [];
@@ -95,88 +78,55 @@ checkboxes.forEach(checkbox => {
   });
 });
 
-
-//클릭시 값 가져오기
+//serch버튼을 눌렀을때 이벤트 실행
 search.addEventListener('click',function(){
   const pdname=document.getElementById('pdname').value;
   console.log(pdname);
   const checktext=document.querySelectorAll('.checktext');
   const table = document.querySelector('table');
   console.log(table);
-  const tablebody=document.querySelector('tbody');
+  const tablebody=document.querySelector('tbody'); 
   console.log(tablebody);
   const tabletr=document.querySelectorAll('tr');
-  const tabletd= document.querySelectorAll('td');
+  const tabletd= document.querySelectorAll('td'); 
   const searchval =document.querySelector('.searchval');
-for(let i=0; i<=35; i++){ 
-  rowval=tabletr[i].innerText;
-  for(let j=0; j<11; j++){
-            let serchvalist='';
-              checkval=checktext[j].value;
-                if(((tabletr[i].children[0].innerText)==pdname && checktext[j].checked)){ 
+  let result = '';
 
-                  console.log(`${searchval}`);
-                  
+  for(let i=0; i<=35; i++){ //row의 전체 길이가 35이다. table의 row의 길이만큼 돌려준다.
+    const productName = tabletr[i].children[0].innerText; //모든 row를 탐색하며 테이블 row안의 0번째===아이스크림 이름을 가져옴.
+    const allergy = tabletr[i].children[7].innerText;//모든 row를 탐색하며 테이블 row안의 7번째===성분값을 가져옴.
+    let shouldDisplay = true; 
 
-                  if((tabletr[i].children[7].innerText).includes(checkval)){
-                    // searchval.innerHTML=rowval.toString();
-                    // console.log(searchval.innerHTML);
-                    console.log(rowval.toString());
-                    
-                  }else if(!((tabletr[i].children[7].innerText).includes(checkval))){ //입력한 제목과 체크한 성분이 일치하지 않다면 x
-                    
-                    
-                    console.log( searchval.innerHTML='성분이 포함되지 않았습니다!');
-    
-                
-                  }
-                }else if(((tabletr[i].children[0].innerText)==pdname)){
-                  let serchvalist='';
-                  searchval.innerHTML=rowval.toString()+'</br>';
-                  serchvalist=searchval.innerHTML;
-                  console.log(serchvalist);
+    if (productName.includes(pdname)) { //row를 탐색하며 pdname(아이스크림 이름)이 포함되어있다면
+      checktext.forEach(checkbox => { //모든 체크박스의 값을 탐색 
+        if (checkbox.checked && !allergy.includes(checkbox.value)) { //체크박스 값이 선택됐을때고, 성분값안에 체크박스의 내용(값)이 없을 경우에만 false
+          shouldDisplay = false; 
+        }
+      });
 
-                }else if(checktext[j].checked){
+      if (shouldDisplay) {//체크박스 값이 선택됐을때고, 성분값안에 체크박스의 내용(값)이 있을 경우에
+        result += tabletr[i].innerText + '<br>'; //tr의 td값을 text로 가져온다. 여러개가 있을 수도 있으니 +=사용
+      }
+    }
+  }
 
-                    if((tabletr[i].children[7].innerText).includes(checkval)){
-                      let serchvalist='';
-                        searchval.innerHTML+=rowval.toString()+'</br>';
-                        console.log(searchval.innerHTML)
-                        serchvalist+=searchval.innerHTML;
-                        console.log(serchvalist);
-
-
-                   
-                    }
-                }
-          }
+  if (result === '') { //값이 입력되지 않았다면
+    searchval.innerHTML = '검색 결과가 없습니다.';
+  } else {
+    searchval.innerHTML = result;
   }
 });
 
+
+//메뉴가 클릭됐을떄 이벤트
+//html에 작성되어있는 table의 값을 메뉴를 클릭했을때 순차적으로 뽑아 tr,td의값  넣어주기.
 menu.addEventListener('click',function(){
 
-  // const tabletr=document.querySelectorAll('tr');
-  // for(let i=0; i<=35; i++){ 
-  //      //입력한 이름의 제품명
-  //     //  let trname= tabletr[i].children[0].innerText;
-  //      //tr의 모든 영양 성분값
-  //     //  let tringredient= tabletr[i].children[7].innerText;
-  //         // table의  해당 row값 출력
-          
-  //         rowval=tabletr[i].innerText;
-
-  //         console.log(rowval);
-  //         // <button id="menuBT">
-  //         // 메뉴판
-  //         // <div class="menuindex">
-
-  //           let menuList=document.querySelector('.menuindex');
-  //           console.log(menuList.innerText+=rowval);
-    
   if (isMenuVisible) {
     menuList.innerHTML = ''; // 출력값 초기화
   } else {
-    const table = document.getElementById('table-data');
+    //html으로 작성되어있는 기존 table을 가져온다.
+    const table = document.getElementById('table-data'); 
     const tableHeaders = table.querySelectorAll('th');
     const tableRows = table.querySelectorAll('tr');
     let output = '';
@@ -208,62 +158,3 @@ menu.addEventListener('click',function(){
 
   isMenuVisible = !isMenuVisible; // 상태 변경
 });
-
-
-  //거의 확정코드!
-//   const table = document.getElementById('table-data');
-//   const tableHeaders = table.querySelectorAll('th');
-//   const tableRows = table.querySelectorAll('tr');
-//   let output = '';
-
-//   // Create table header row
-//   let headerRow = '<table>';
-//   headerRow += '<tr>';
-//   for (let i = 0; i < tableHeaders.length; i++) {
-//     headerRow += '<th>' + tableHeaders[i].innerText + '</th>';
-//   }
-//   headerRow += '</tr>';
-//   output += headerRow;
-
-//   // Create table data rows
-//   for (let i = 1; i < tableRows.length; i++) {
-//     const tableData = tableRows[i].querySelectorAll('td');
-//     let rowData = '<tr>';
-//     for (let j = 0; j < tableData.length; j++) {
-//       rowData += '<td>' + tableData[j].innerText + '</td>';
-//     }
-//     rowData += '</tr>';
-//     output += rowData;
-//   }
-
-//   output += '</table>';
-
-//   let menuList = document.querySelector('.menuindex');
-//   menuList.innerHTML = output;
-// });
-
-
-
-
-  // var chunkSize = 8; // 잘라낼 크기
-  // var slicedArray = [];
-  // for (var k = 0; k < cellValues.length; k += chunkSize) {
-  //   var chunk = cellValues.slice(k, k + chunkSize);
-  //   slicedArray.push(chunk);
-  // }
-  
-  // let trid=document.getElementById('name');
-  // trid.innerText=(`${slicedArray[0]}`);
-  // trid.innerText=(`${slicedArray[1]}`);
-  // trid.innerText=(`${slicedArray[2]}`);
-  // trid.innerText=(`${slicedArray[3]}`);
-  // // console.log(`${slicedArray[0]}`); // i 7개씩 잘라진 배열 출력
-//   }
-// });
-
-
-
-
-
-
-
