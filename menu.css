@@ -156,7 +156,7 @@ button {
     width: 88px;
     height: 33px;
   }
-  input {
+ .count {
     width: 70px;
     height: 35px;
     text-align: center;

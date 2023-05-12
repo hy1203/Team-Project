@@ -5,8 +5,11 @@
   .logo2 {
       display: none;
   }
+  .navbar-nav {
+      font-size: 16px;
+  }
 }
-@media (max-width: 991.98px) {
+@media (max-width: 992px) {
   .navbar-collapse {
       position: relative;
       left: 500px;
@@ -29,7 +32,7 @@
       position: absolute;
       top: 100%;
       left: 0;
-      z-index: 1;
+      z-index: 10;
       width: 100%;
       background-color: #fff;
       padding: 10px;
@@ -85,13 +88,16 @@
   position: relative;
 }
 .navbar {
-  height: 100px;
+
+  height: 110px;
 }
 .navbar-nav {
   font-family: 'Cafe24Danjunghae';
+
 }
 .navbar-brand {
   font-family: 'Cafe24Danjunghae';
+
 }
 .navbar-collapse {
   display: flex;
@@ -111,14 +117,15 @@
 }
 
 .d-flex {
-  width: 30%;
+  width: 23%;
   display: flex;
   justify-content: flex-start;
 }
 .logo{
   position: relative;
   align-self: center;
-  width: 25%;
+
+  width: 18%;
   height: 80px;
 }
 .logo2 {
