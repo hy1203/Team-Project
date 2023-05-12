@@ -78,7 +78,7 @@ checkboxes.forEach(checkbox => {
   });
 });
 
-//serch버튼을 눌렀을때 이벤트 실행
+//serch버튼을 눌렀을때 이벤트 실행.
 search.addEventListener('click',function(){
   const pdname=document.getElementById('pdname').value;
   console.log(pdname);

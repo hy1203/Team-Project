@@ -31,7 +31,7 @@ function nutClick(){
           
       
 //내코드
-  // 이름과 체크박스 함께 나오도록 짠 코드
+  // 이름과 체크박스 함께 나오도록 짠 코드.
   for(let i=0; i<=35; i++){ 
           // table의  해당 row값 출력
           rowval=tabletr[i].innerText;
