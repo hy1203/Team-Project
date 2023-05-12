@@ -49,12 +49,9 @@ function nutClick(){
                         console.log(((tabletr[i].children[7].innerText).includes(checkval)));
                     }
                   }
-            }
-    }
-
-   
-
-}
+                }
+              }
+          }
 
 function buttonClick(){
   alert("버튼을 클릭하셨습니다!");

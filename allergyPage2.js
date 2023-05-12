@@ -10,6 +10,7 @@ const checkboxes = document.querySelectorAll('.checktext');
 //입력값 input이 눌리면 이벤트 시작
 pdnameInput.addEventListener('input', function() {
   const searchKeyword = pdnameInput.value.trim(); //이름값을 공백없이 가져온다.
+  
   const rows = document.querySelectorAll('#table-data tbody tr'); //row에 tr값을 모두 가져온다.
   rows.forEach(row => { //row의 값만큼 반복
     const productName = row.querySelector('.title').innerText;
