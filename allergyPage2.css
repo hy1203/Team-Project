@@ -141,8 +141,12 @@ body{
     .nut-info1 label{
         font-family: 'KCC-Ganpan';
         color: white;
-       padding-top:10px;
+       padding-top:13px;
+       padding-right: 6px;
+      
     }
+
+    
     .nut-info2{
         display: flex;
         justify-content: center;
