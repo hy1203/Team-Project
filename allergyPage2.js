@@ -10,6 +10,7 @@ const checkboxes = document.querySelectorAll('.checktext');
 //입력값 input이 눌리면 이벤트 시작
 pdnameInput.addEventListener('input', function() {
   const searchKeyword = pdnameInput.value.trim(); //이름값을 공백없이 가져온다.
+  
   const rows = document.querySelectorAll('#table-data tbody tr'); //row에 tr값을 모두 가져온다.
   rows.forEach(row => { //row의 값만큼 반복
     const productName = row.querySelector('.title').innerText;
@@ -78,7 +79,6 @@ checkboxes.forEach(checkbox => {
   });
 });
 
-
 //serch버튼을 눌렀을때 이벤트 실행.
 search.addEventListener('click',function(){
   const pdname=document.getElementById('pdname').value;
@@ -107,11 +107,9 @@ search.addEventListener('click',function(){
 
       if (shouldDisplay) {//체크박스 값이 선택됐을때고, 성분값안에 체크박스의 내용(값)이 있을 경우에
         result += tabletr[i].innerText + '<br>'; //tr의 td값을 text로 가져온다. 여러개가 있을 수도 있으니 +=사용
-
       }
     }
   }
-
 
   if (result === '') { //값이 입력되지 않았다면
     searchval.innerHTML = '검색 결과가 없습니다.';
@@ -124,6 +122,7 @@ search.addEventListener('click',function(){
 //메뉴가 클릭됐을떄 이벤트
 //html에 작성되어있는 table의 값을 메뉴를 클릭했을때 순차적으로 뽑아 tr,td의값  넣어주기.
 menu.addEventListener('click',function(){
+
   if (isMenuVisible) {
     menuList.innerHTML = ''; // 출력값 초기화
   } else {
@@ -160,4 +159,3 @@ menu.addEventListener('click',function(){
 
   isMenuVisible = !isMenuVisible; // 상태 변경
 });
-

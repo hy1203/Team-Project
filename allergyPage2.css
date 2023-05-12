@@ -72,14 +72,14 @@ body{
         position: relative;
     }
 
-    .imgcircle{
+.imgcircle{
         width: 1068px;
         margin-top: 116px;
         position: absolute;
         z-index: 1;
         
     }
-    .searchbox{
+ .searchbox{
         margin-top: 500px;
         /* background-color: aqua; */
         position: absolute;
@@ -88,7 +88,7 @@ body{
        
     }
 
-    .nut-infoTitle h1{
+.nut-infoTitle h1{
         font-size: 58px;
         color: white;
         font-family: 'TheJamsil5Bold';
