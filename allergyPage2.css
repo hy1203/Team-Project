@@ -49,7 +49,7 @@ body{
         float: left;
     }
 
-    .box1{
+.box1{
         width: 55%;
         height: 100%;
         margin-left: -8%; 
@@ -57,25 +57,14 @@ body{
         float: left;
 
     }
-    .box2{
+.box2{
         width: 900px;
         height: auto;
         background-color: rgb(110, 164, 245);
         float: left;
     }
 
-
-    /* #table-data tr{
-        display: none;
-      } */
-
-
-      .checkbox{
-
-      }
-    
-
-    .imgcircleBox{
+.imgcircleBox{
         width: 100%;
         display: flex;
         justify-content: center;
@@ -116,7 +105,7 @@ body{
     .nut-infobox label{
         font-family: 'KCC-Ganpan';
         color: white;
-        margin: 10 10px;
+       padding: 10 10px;
     }
 
     input{
@@ -137,6 +126,14 @@ body{
         
       }
 
+      .nut-info1{
+        display: flex;
+        justify-content: center;
+        margin: 22px;
+        text-align: center;
+
+
+    }
 
     .nut-info2{
         display: flex;
@@ -146,11 +143,6 @@ body{
 
     }
 
-    .nut-info2 label{
-        margin: 1px 5px;
-
-
-    }
 
     .checkList input{
         margin: 1px 3px;
@@ -158,7 +150,7 @@ body{
     }
 
     div.checkList{
-        width: 787px;
+        width: 702px;
         height: 43px;
         font-size: 17px;
         border: 0;
@@ -169,8 +161,26 @@ body{
         padding-top: 9px;
     }
     #search{
-        z-index:100;
+        color: #5B6C7B;
+        border-color: white;
+       border-radius: 10px;
+       width: 100px;
+       background-color: #FCEE96;
+       font-family: 'TheJamsil5Bold';
+}
+
+    #menuBT{
+        color: #5B6C7B;
+        border-color: white;
+        border-radius: 40px;
+        font-size: larger;
+        width: 216px;
+        height: 76px;
+        background-color: #84DCC6;
+        font-family: 'TheJamsil5Bold';
     }
+
+    
 
     .list_pdbox{
         width: 100%;
@@ -193,20 +203,46 @@ body{
     }
 
     .menuindex{
+        position: relative;
         display: flex;
         justify-content: center;
         z-index:10 ;
         width: 100%;
-        margin-top: 493px;
+        margin-top: 258px;
         font-family: 'TheJamsil5Bo';
 
     }
 
     .menuindex table{
+        /* position: relative; */
+        
         border-radius: 20px;
-        width: 1295px;
+        width: 1179px;
         background-color:pink;
         font-family: 'TheJamsil5Bold';
+}
+
+
+.searchvalbox{
+    display: flex;
+    justify-content: center;
+    z-index:8 ;
+    width: 100%;
+    position: absolute;
+}
+
+.searchval{
+    border-radius: 20px;
+    background-color:pink;
+    font-family: 'TheJamsil5Bold';
+    margin-top: 1179px;
+    width:64%;
+    text-align: center;
+}
+
+.nut-info2-allergy{
+    width: 70px;
+   
 }
 
 
@@ -215,6 +251,22 @@ body{
     background-color:green;
    
 }
+
+.btsbox{
+    display: flex;
+    justify-content: center;
+    z-index: 4;
+  
+    
+}
+
+.btsbox2{
+    display: flex;
+    justify-content: center;
+    z-index: 4;
+    margin-top: 100px;
+}
+
 
 
 @font-face {
