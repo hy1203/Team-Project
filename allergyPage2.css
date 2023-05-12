@@ -107,6 +107,9 @@ body{
        padding: 10 10px;
     }
 
+
+
+
     .nut-info1 input{
         font-family: 'KCC-Ganpan';
         color:white;
@@ -134,6 +137,12 @@ body{
 
     }
 
+
+    .nut-info1 label{
+        font-family: 'KCC-Ganpan';
+        color: white;
+       padding-top:10px;
+    }
     .nut-info2{
         display: flex;
         justify-content: center;
