@@ -8,7 +8,6 @@
 
 body{
     background-color:#fee5ca ;
-    /* background-color:#9dcef6; */
 }
 
 .carousel-item{
@@ -108,7 +107,7 @@ body{
        padding: 10 10px;
     }
 
-    input{
+    .nut-info1 input{
         font-family: 'KCC-Ganpan';
         color:white;
     }
@@ -143,6 +142,7 @@ body{
 
     }
 
+    
 
     .checkList input{
         margin: 1px 3px;
@@ -276,6 +276,8 @@ body{
     font-style: normal;
 }
 
+
+
 @font-face {
     font-family: 'KCC-Ganpan';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
@@ -283,20 +285,5 @@ body{
     font-style: normal;
 }
 
-
-
-
-
-    @keyframes movingstar{
-        from{
-           transform: translateY(0);
-           /* animation-timing-function: cubic-bezier(1,0,0.8,1); */
-        }
-        to{
-            transform: translateY(400px);
-        }
-
-
-    }
 
 
