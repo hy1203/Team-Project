@@ -1,10 +1,10 @@
 .poopbox{
-    width: auto; 
-    height: auto; 
+
+    left: 5%;
+    width: 90%; 
     background-color: #9FB4FF; 
-    position: absolute; 
-    margin-top: 3%; 
-    margin-left: 14%;
+    position: relative; 
+    margin-top: 1%; 
     /* margin-right: 14%; */
     /* margin-bottom: 5%; */
     border-radius: 20px 20px 20px 20px;
