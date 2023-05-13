@@ -13,7 +13,7 @@ window.onload = function () {
         bannerLeft += $(this).width() + 5;
         $(this).attr("id", "banner" + (++imgCnt));  // img에 id 속성 추가
     });
-    if (imgCnt > 5) { //배너 9개 이상이면 이동시킴
+    if (imgCnt > 5) { //배너 5개 이상이면 이동시킴
         last = imgCnt;
         setInterval(function () {
             $img.each(function () {
