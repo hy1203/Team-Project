@@ -221,7 +221,7 @@ body{
         justify-content: center;
         z-index:10 ;
         width: 100%;
-        margin-top: 258px;
+        margin-top: 64px;
         font-family: 'TheJamsil5Bo';
 
     }
@@ -280,7 +280,25 @@ body{
     margin-top: 100px;
 }
 
+/* 모달 */
 
+.closebox{
+    width: 100%;
+    padding-bottom: 1rem;
+    text-align: center;
+
+}
+
+.close{
+    font-size: 4rem;
+    float: right;
+}
+
+p{
+    font-family: 'KCC-Ganpan';
+    font-size: 4rem;
+    margin-top: 30px;
+}
 
 @font-face {
     font-family: 'TheJamsil5Bold';
