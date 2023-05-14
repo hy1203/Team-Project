@@ -116,46 +116,63 @@ search.addEventListener('click',function(){
   } else {
     searchval.innerHTML = result;
   }
+
 });
 
 
-//메뉴가 클릭됐을떄 이벤트
-//html에 작성되어있는 table의 값을 메뉴를 클릭했을때 순차적으로 뽑아 tr,td의값  넣어주기.
-menu.addEventListener('click',function(){
 
-  if (isMenuVisible) {
-    menuList.innerHTML = ''; // 출력값 초기화
-  } else {
-    //html으로 작성되어있는 기존 table을 가져온다.
-    const table = document.getElementById('table-data'); 
-    const tableHeaders = table.querySelectorAll('th');
-    const tableRows = table.querySelectorAll('tr');
-    let output = '';
+// 모달에 전체메뉴 출력하기
+function showModal(content) {
+  const modal = document.getElementById('modal');
+  const modalBody = document.getElementById('modal-body');
 
-    // 테이블헤더값가져오기
-    let headerRow = '<table>';
-    headerRow += '<tr>';
-    for (let i = 0; i < tableHeaders.length; i++) {
-      headerRow += '<th>' + tableHeaders[i].innerText + '</th>';
+  modalBody.innerHTML = '<p>Menu List</p>'+content;
+  modal.style.display = 'block';
+}
+
+// 모달 창 숨김
+function hideModal() {
+  const modal = document.getElementById('modal');
+  modal.style.display = 'none';
+}
+
+// 모달 닫기 버튼 클릭 이벤트 핸들러
+const closeButton = document.querySelector('.close');
+closeButton.addEventListener('click', hideModal);
+
+// 메뉴 클릭 이벤트 핸들러
+menu.addEventListener('click', function() {
+  //html으로 작성되어있는 기존 table을 가져온다.
+  const table = document.getElementById('table-data'); 
+  const tableHeaders = table.querySelectorAll('th');
+  const tableRows = table.querySelectorAll('tr');
+  let output = '';
+
+  // 테이블헤더값가져오기
+  let headerRow = '<table>';
+  headerRow += '<tr>';
+  for (let i = 0; i < tableHeaders.length; i++) {
+    headerRow += '<th>' + tableHeaders[i].innerText + '</th>';
+  }
+  headerRow += '</tr>';
+  output += headerRow;
+
+  // 데이터 row테이블 만들기
+  for (let i = 1; i < tableRows.length; i++) {
+    const tableData = tableRows[i].querySelectorAll('td');
+    let rowData = '<tr>';
+    for (let j = 0; j < tableData.length; j++) {
+      rowData += '<td>' + tableData[j].innerText + '</td>';
     }
-    headerRow += '</tr>';
-    output += headerRow;
-
-    // 데이터 row테이블 만들기
-    for (let i = 1; i < tableRows.length; i++) {
-      const tableData = tableRows[i].querySelectorAll('td');
-      let rowData = '<tr>';
-      for (let j = 0; j < tableData.length; j++) {
-        rowData += '<td>' + tableData[j].innerText + '</td>';
-      }
-      rowData += '</tr>';
-      output += rowData;
-    }
-
-    output += '</table>';
-
-    menuList.innerHTML = output;
+    rowData += '</tr>';
+    output += rowData;
   }
 
-  isMenuVisible = !isMenuVisible; // 상태 변경
+  output += '</table>';
+
+  const menuIndexDiv = document.createElement('div');
+  menuIndexDiv.className = 'menuindex';
+  menuIndexDiv.innerHTML = output;
+
+  showModal(menuIndexDiv.outerHTML); // 모달 창에 출력값 표시
 });
