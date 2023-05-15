@@ -17,7 +17,7 @@ form {
     text-align: center;
 }
 body {
-    background-image: url('./image/loginback.png');
+    background-image: url('/image/loginback.png');
     background-size: cover;
 }
 input {

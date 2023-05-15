@@ -8,7 +8,7 @@ ctx.fillStyle = 'red';
 ctx.fillRect(10, 10, 100, 100);
 
 var img2=new Image();
-img2.src='./image/man.png';
+img2.src='/image/man.png';
 
 var dino={
     x : 300,
@@ -17,21 +17,12 @@ var dino={
     height: 160,
     draw(){
         ctx.fillStyle='green';
-        // ctx.fillRect(this.x, this.y, this.width, this.height);
         ctx.drawImage(img2, this.x, this.y, this.width, this.height)
     }
 }
 
-// dino.x += 1;
-// dino.draw()
-
 var img1=new Image();
-img1.src='./image/virus.png';
-
-// src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js">
-// <lottie-player src="https://assets2.lottiefiles.com/private_files/lf30_ivjl6k5z.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop controls autoplay></lottie-player>
-// var img1=new Image();
-// img1.src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js";
+img1.src='/image/virus.png';
 
 class Cactus
 {
@@ -43,14 +34,9 @@ class Cactus
     }
     draw(){
         ctx.fillStyle='red';
-        // ctx.fillRect(this.x, this.y, this.width, this.height);
         ctx.drawImage(img1, this.x, this.y, this.width, this.height)
     }
 }
-
-// var cactus = new Cactus();
-// cactus.draw();
-
 var timer =0;
 var cactus여러개=[];
 var 점프timer=0;

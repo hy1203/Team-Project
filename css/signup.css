@@ -3,7 +3,7 @@ main {
     margin-top: 90px;
 }
 body {
-    background-image: url('./image/signupback.png');
+    background-image: url('/image/signupback.png');
     background-size: cover;
 }
 .myform{
