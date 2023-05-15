@@ -142,7 +142,7 @@ button {
 
   .modalBox {
     position: absolute;
-    background-image: url(./image/1.png);
+    background-image: url(/image/1.png);
     background-size: contain;
     border-radius: 12px;
     width: 500px;
